@@ -1,0 +1,69 @@
+header.main-header
+	a(href='/').logo
+		span.logo-lg
+			<b>RS Pondok Indah</b>
+	nav(role='navigation').navbar.navbar-static-top
+		a(href='#', role='button', data-toggle='offcanvas').sidebar-toggle
+			span.sr-only Toggle Navigation
+			span.icon-bar
+			span.icon-bar
+			span.icon-bar
+		div.navbar-custom-menu
+			ul.nav.navbar-nav
+				li.dropdown.messages-menu
+					a(href='#', data-toggle='dropdown').dropdown-toggle
+						i.fa.fa-envelope-o
+						span.label.label-success
+							| 4
+					ul.dropdown-menu
+						li.header
+							| 4 pesan baru
+						li
+							ul.menu
+								li
+									a(href='#')
+										.pull-left
+											img(src='/adminlte/dist/img/user5-128x128.jpg',alt="User image").img-circle
+										h4
+											| Arabella Pandita
+											small
+												i.fa.fa-clock-o	5 mins
+										p
+											| Siang min, hari ini jadwal dokter
+										p 
+											| kandungan jam berapa ya?
+
+				li.dropdown.notifications-menu
+					a(href='#',data-toggle='dropdown').dropdown-toggle
+						i.fa.fa-bell-o
+						span.label.label-warning
+							| 5
+					ul.dropdown-menu
+						li.header
+							| Notifikasi Pendaftaran Pasien
+						li
+							ul.menu
+								li
+									a(href='#')
+										i.fa.fa-users.text-aqua
+										| 5 pasien baru mendaftar hari ini
+				li.dropdown.user.user-menu
+					a(href='#',data-toggle='dropdown').dropdown-toggle
+						img(src='https://avatars.githubusercontent.com/u/69023670?v=4',alt='User Image').user-image
+						span.hidden-xs
+							| Regina Permatasari
+					ul.dropdown-menu
+						li.user-header
+							img(src='https://avatars.githubusercontent.com/u/69023670?v=4',alt='User Image').img-circle
+							p
+								| Regina Permatasari 
+								small
+									| Perawat
+
+						li.user-footer
+							.pull-left
+								a(href='/profile').btn.btn-default.btn-flat
+									| Profile
+							.pull-right
+								a(href='/login').btn.btn-default.btn-flat
+									| Keluar

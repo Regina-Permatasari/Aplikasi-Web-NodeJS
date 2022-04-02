@@ -1,0 +1,52 @@
+extends ../layout/base 
+block content 
+	section.content-header 
+	section.content
+		.box
+			.box-header.with-border
+				h3.box-title
+					| Profil Saya
+			.box-body
+				.container-fluid
+					.row
+						// First Tab
+						#profileList.tab-pane.active(role='tabpanel')
+							.card-body
+							form.form-horizontal.form-material(action='/users/update-profile/4', method='POST', enctype='multipart/form-data', onsubmit='addNewLines()')
+								input(type='hidden', name='_token', value='CBvPOM2D4xEieM18jct4QFbljzImVLqwhWzF867I')
+								| 
+								.form-group
+								|                                                 
+								.col-md-12
+									img(src="https://avatars.githubusercontent.com/u/69023670?v=4", alt="gambar", style=('width:200px;height:200px;'))
+								|                                              
+								.form-group
+								label.col-md-12 Nama Lengkap
+								|                                                 
+								.col-md-12
+									input.form-control.form-control-line.pl-0(type='text', value='Regina Permatasari', disabled='')
+								|                                          
+								.form-group
+								label.col-md-12.mt-2(for='example-email') Email
+								|                                                 
+								.col-md-12
+									input.form-control.form-control-line.pl-0(type='email', value='reginapermata06@gmail.com', disabled='')
+								|                                             
+								.form-group
+								label.col-md-12.mt-2 No HP
+								|                                                 
+								.col-md-12
+									input.form-control.form-control-line.pl-0(type='text', value='085869458863', disabled='')
+								|    
+								.form-group
+								label.col-md-12.mt-2 Status
+								|                                                 
+								.col-md-12
+									input.form-control.form-control-line.pl-0(type='text', value='Perawat', disabled='')
+								|  
+								.form-group
+								label.col-md-12.mt-2 Alamat
+								|                                                 
+								.col-md-12
+									input.form-control.form-control-line.pl-0(type='text', value='Karanggayam RT 01 RW 01 Kecamatan Lumbir Kabupaten Banyumas Jawa Tengah', disabled='')
+								|                                          							

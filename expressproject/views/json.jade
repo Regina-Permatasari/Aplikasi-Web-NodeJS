@@ -1,0 +1,10 @@
+extends layout
+
+block content
+	h1 test 1234
+	ul
+		for row, index in data
+			li #{row.name}
+				ul
+					for y,i in row.sub_menu
+						li #{y.nama_sub_menu}

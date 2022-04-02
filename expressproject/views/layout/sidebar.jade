@@ -1,0 +1,47 @@
+aside.main-sidebar
+	section.sidebar
+		.user-panel
+			.pull-left.image
+				img(src='https://avatars.githubusercontent.com/u/69023670?v=4',alt='User Image').img-circle
+			.pull-left.info
+				p Regina Permatasari
+				a(href='/profile')
+					i.fa.fa-circle.text-success 
+					| Perawat
+		form(action='#',method='get').sidebar-form
+			.input-group
+				input(type='text', name='q',placeholder='Search...').form-control
+				span.input-group-btn
+						button(type='submit', name='search')#search-btn.btn.btn-flat
+							i.fa-fa-search
+		ul.sidebar-menu
+			li.header
+				| Data Tabel
+			li.treeview
+				a(href='/dokter')
+					i.fa.fa-stethoscope
+					span
+						| Dokter 
+					span.pull-right-container
+						i.fa.fa-angle-left.pull-right
+			li.treeview
+				a(href='/customers')
+					i.fa.fa-bed
+					span
+						| Pasien
+					span.pull-right-container
+						i.fa.fa-angle-left.pull-right
+			li.treeview
+				a(href='/obat')
+					i.fa.fa-drupal
+					span
+						| Obat 
+					span.pull-right-container
+						i.fa.fa-angle-left.pull-right
+			li.treeview
+				a(href='/profile')
+					i.fa.fa-user
+					span
+						| Profile
+					span.pull-right-container
+						i.fa.fa-angle-left.pull-right

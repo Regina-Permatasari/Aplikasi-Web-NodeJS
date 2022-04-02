@@ -1,0 +1,59 @@
+extends ../layout/base 
+block content 
+	section.content-header 
+		h1 
+			| Edit Data Obat
+	section.content
+		.box
+			.box-header.with-border
+				h3.box-title
+					| Obat
+				.box-tools.pull-right
+					button(type='button', data-widget='collapse', data-toggle='tooltip',title='collapse').btn.btn-box-tool
+						i.fa.fa-minus
+					
+			.box-body
+				form(role='form',method='post' action='/obat/edit/#{(id==undefined) ? data.id : id}')
+					.row
+						
+						.col-xs-6
+							.box-body
+								- if (messages.msg_error) 
+									.alert.alert-danger.alert-dismissable 
+										button.close(type='button', data-dismiss='alert', aria-hidden='true') 
+											| ×
+										h4
+											i.icon.fa.fa-ban
+											| Alert! 
+										| !{messages.msg_error}
+								- if (messages.msg_info) 
+									.alert.alert-success.alert-dismissable 
+										button.close(type='button', data-dismiss='alert', aria-hidden='true') 
+											| ×
+										h4
+											i.icon.fa.fa-ban
+											| Success! 
+										| !{messages.msg_info}
+								.form-group
+									label
+										| Nama
+									input(type='text',value="#{data.name}",name='name',placeholder='Masukkan Nama', autofocus).form-control
+								.form-group
+									label
+										| Kadaluwarsa
+									input(type='date',value="#{ (kadaluwarsa == undefined) ? data.kadaluwarsa : kadaluwarsa }",name='kadaluwarsa',placeholder='Masukkan Tanggal Kadaluwarsa').form-control
+								.form-group
+									label
+										| Stok
+									input(type='text',value="#{data.stok}",name='stok',placeholder='Masukkan Jumlah Stok').form-control
+								.form-group
+									label
+										| Gambar
+									input(type="file",value="#{data.gambar}",name="gambar",placeholder="Masukkan Gambar").form-control
+							.box-footer
+								input(type="hidden",name="_method", value="PUT")
+								button(type='submit').btn.btn-warning
+									i.fa.fa-pencil 
+									|  Edit
+								a(href='/obat').btn.btn-info.pull-right
+									| Back
